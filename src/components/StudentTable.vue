@@ -43,7 +43,7 @@ import StudentRow from '@/components/StudentRow.vue'
         components: {
             StudentRow
         },
-        emits: ['student-arrived-or-left', 'delete-student'],
+        emits: ['students-arrived-or-left', 'delete-student'],
         props: {
             students: Array
         },
@@ -55,7 +55,8 @@ import StudentRow from '@/components/StudentRow.vue'
         methods: {
             arrivedOrLeft(student, present) {
                 // emit message to parent
-                this.$emit('student-arrived-or-left', student, present)
+                console.log('This is student table', student)
+                this.$emit('students-arrived-or-left', student, present)
             },
             deleteStudent(student) {
                 this.$emit('delete-student', student)

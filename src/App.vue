@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <new-student-form>v-on:student-added="newStudentAdded"></new-student-form>
+    <new-student-form v-on:student-added="newStudentAdded"></new-student-form>
     <student-message v-bind:student="mostRecentStudent"></student-message>
     <student-table 
     v-bind:students="students" 
@@ -39,6 +39,7 @@ export default {
     studentsArrivedOrLeft(student, present) {
       // find student in array of students
       //update present attribute
+      console.log('This is app.vue', student)
 
       let updateStudent = this.students.find( function(s) {
         if(s.name === student.name && s.starID === student.starID) {

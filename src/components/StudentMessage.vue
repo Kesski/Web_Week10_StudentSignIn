@@ -2,8 +2,8 @@
     <div>
         <!-- Template/HTML here -->
         <div v-if="student.name">
-            <div class="alert alert-success" v-if="mostRecentStudent.present">
-                Welcome, {{ mostRecentStudent.name }}
+            <div class="alert alert-success" v-if="student.present">
+                Welcome, {{ student.name }}
             </div>
 
             <div class="alert alert-info" v-else>

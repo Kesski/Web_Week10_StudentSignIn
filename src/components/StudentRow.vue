@@ -17,6 +17,7 @@ export default {
     },
     methods: {
         arrivedOrLeft(student, present) {
+            console.log('This is student row', student)
             this.$emit('student-arrived-or-left', student, present)
         },
         deleteStudent() {

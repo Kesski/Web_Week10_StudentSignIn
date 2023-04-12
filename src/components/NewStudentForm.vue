@@ -53,6 +53,7 @@
                 // if there are no errors
                 if (this.errors.length == 0) {
                     let student = { name: this.newStudentName, starID: this.newStarID, present: false }
+                    
 
                     this.$emit('student-added', student)
 
